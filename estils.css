@@ -1,0 +1,8 @@
+
+:root {
+    --color_fons:antiquewhite;
+}
+
+body{
+    background-color: var(--color_fons);
+}
