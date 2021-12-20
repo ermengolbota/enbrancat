@@ -33,20 +33,31 @@
         <a class="waves-effect waves-light btn modal-trigger" href="#pomes">Pomes</a>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus facere, quod unde, cum suscipit
             necessitatibus dolores ut officia quaerat ex nemo fuga error perferendis, sit corporis? Hic ab pariatur
-            architecto voluptatum, doloribus, quasi quam harum omnis ea dolorem et quas quibusdam, explicabo a magni?
-            Porro
-            ratione aliquam rem pariatur maxime ab quos cupiditate, corrupti voluptate expedita sequi eius tempore,
-            adipisci
-            accusamus quasi nihil? Commodi doloremque, maxime id quis consequuntur repellat possimus magnam odio debitis
-            maiores iusto a tempore doloribus aut. Voluptas deserunt, quaerat asperiores aperiam cupiditate dolorem
-            laborum
-            neque accusamus incidunt consectetur, id dolore reprehenderit! Vel possimus illo perspiciatis.
+            architsamus incidunt consectetur, id dolore reprehenderit! Vel possimus illo perspiciatis.
         </p>
-        <!-- Prova de dos modals -->
+        <h2>Prova de puntació</h2>
+        <form class="puntuacio">
+            <label>
+                <input name="grup1" type="radio" />
+                <span>1</span>
+            </label>
+            <label>
+                <input name="grup1" type="radio" />
+                <span>2</span>
+            </label>
+            <label>
+                <input name="grup1" type="radio" />
+                <span>3</span>
+            </label>
+        </form>
+
+
+
+        <!-- Prova de dos modals. D'entrada estan ocults -->
         <div id="patates" class="modal">
             <div class="modal-content">
                 <h4>Sí senyor, patates</h4>
-                <p>A bunch of text</p>
+                <p>A bunch of potatoes</p>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Adeu a les patates</a>
@@ -69,11 +80,16 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        function unaProva() {
+            console.log("Ja esta, ja s'ha obert el modal");
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.modal');
             var instances = M.Modal.init(elems, {
                 inDuration: 20,
-                dismisable: true
+                dismisable: true,
+                onOpenEnd: unaProva
             });
         });
     </script>
